@@ -2,6 +2,7 @@
 import BarraMenu from "./components/BarraMenu";
 import Lista from "./components/Lista";
 import Login from "./Login/Login"
+import Reserv from "./reservas/Reserv";
 // src/App.js
 import React, { useState } from 'react';
 
@@ -16,9 +17,10 @@ const App = () => {
   };
   return (
     <div>
+      {< Reserv />}
       {loggedIn ? (
         <div>
-         
+          
           {<BarraMenu/>}
           {<Lista/>}
         </div>
