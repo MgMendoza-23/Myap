@@ -1,34 +1,26 @@
-//import Datos from "./components/Datos";
-import BarraMenu from "./components/BarraMenu";
-import Lista from "./components/Lista";
-import Login from "./Login/Login"
-import Reserv from "./reservas/Reserv";
-// src/App.js
 import React, { useState } from 'react';
-
+import { BrowserRouter, Redirect } from 'react-router-dom';
+import Login from "./Login/Login"
+import Rutas from "./routes/Rutas";
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = () => {
-    // Aquí podrías realizar la lógica de autenticación y actualizar loggedIn
-    // Por ahora, simplemente estableceremos loggedIn en true
     setLoggedIn(true);
-  };
+  }
+
   return (
     <div>
-      {< Reserv />}
       {loggedIn ? (
-        <div>
-          
-          {<BarraMenu/>}
-          {<Lista/>}
-        </div>
+        <BrowserRouter>
+          <Rutas/>
+        </BrowserRouter>
       ) : (
         <Login onLogin={handleLogin} />
       )}
     </div>
-  );
-};
+  )
+}
 
 export default App;

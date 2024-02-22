@@ -19,7 +19,7 @@ const Login = ({ onLogin }) => {
 
   return (
     <div className="login-container">
-      <h2 className="login-header">Login</h2>
+      <h2 className="login-header">Iniciar sesión</h2>
       <label className="login-label">
         Usuario:
         <input
