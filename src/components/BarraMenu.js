@@ -14,17 +14,17 @@ export default function BarraMenu() {
                   <Link class="nav-link active" aria-current="page" to="/">Principal</Link>
                 </li>
                 <li class="nav-item">
-                  <Link class="nav-link" to="/lista">Datos</Link>
+                  <Link class="nav-link" to="/lista">Menú</Link>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Mas
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Comentarios</a></li>
+                    <li><Link class="dropdown-item" to="/Notificacion">Notificaciones</Link></li>
                     <li><a class="dropdown-item" href="#">Soporte</a></li>
                     <li><hr class="dropdown-divider"/></li>
-                    <li><a class="dropdown-item" href="#">Reportar!</a></li>
+                    <li><Link class="dropdown-item" to="/Defaul">Perfil</Link></li>
                   </ul>
                 </li>
                 <li class="nav-item">

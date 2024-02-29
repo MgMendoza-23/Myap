@@ -1,23 +1,17 @@
 export const lista=[
     {
         "id":"01",
-        "nombre":"Pollerías",
-        "tel":"Asados, Rostizados y estilo KFC",
-        "direccion":"Balancan",
-        "imag":"https://th.bing.com/th/id/OIP.BcKYeMT-zB6egLwygNzb2wHaHa?rs=1&pid=ImgDetMain"
+        "nombre":"Colosso",
+        "tel":"Italiana, Pizzería, Fusión",
+        "direccion":"Av. Paseo la Choca Col. Tabasco 2000, Villahermosa 86035 México",
+        "imag":"https://media-cdn.tripadvisor.com/media/photo-m/1280/19/e2/4e/38/pide-tu-corte-de-picana.jpg"
     },
     {
         "id":"02",
-        "nombre":"Pizzerías",
-        "tel":
-        <select class="form-select form-select-sm" aria-label="Small select example">
-        <option selected>Seleccionar</option>
-        <option value="1">Hawaiana</option>
-        <option value="2">Mexicana</option>
-        <option value="3">Mas..</option>
-      </select>,
-        "direccion":"Balancan",
-        "imag":"https://www.ocu.org/-/media/ocu/images/home/alimentacion/alimentos/pizzas_selector_1600x900.jpg?rev=6a81e278-07fc-4e95-9ba1-361063f35adf&hash=B8B1264AB6FC3F4B1AE140EB390208CD"
+        "nombre":"Condimento",
+        "tel":"+52 993 310 0201",
+        "direccion":"Ave Paseo Tabasco 1407 Col Tabasco 2000, Villahermosa 86037 México",
+        "imag":"https://media-cdn.tripadvisor.com/media/photo-o/12/2b/e3/5d/comodas-instalaciones.jpg"
     },
     {
         "id":"02",
@@ -29,23 +23,23 @@ export const lista=[
     },
     {
         "id":"01",
-        "nombre":"Sopes ",
-        "tel":"Carne, Asada, Papas con choriza, etc",
-        "direccion":"Balancan",
-        "imag":"https://img.chilango.com/2018/04/sopes-gigantes-cdmx.jpg"
+        "nombre":"Vuelve Carmela ",
+        "tel":"Mexicana, Contemporánea",
+        "direccion":"Prolongación 27 de Febrero 3303 Local PA01, Villahermosa 86037 México",
+        "imag":"https://media-cdn.tripadvisor.com/media/photo-o/21/ea/31/08/vuelve-carmela.jpg"
     },
     {
         "id":"02",
-        "nombre":"Puestos Diversos",
-        "tel":"Antogitos generales",
-        "direccion":"Balancan",
-        "imag":"https://2.bp.blogspot.com/-mC_wBineIrI/Uhy2LwYXQ_I/AAAAAAAAEeY/wzKDC7wahws/s1600/panuchos2.jpg"
+        "nombre":"El Reyna Mariscos",
+        "tel":"Mexicana, Latina, Mariscos",
+        "direccion":"Plaza Hahra's, AV. Paseo Tabasco, Esq. Prol. 27 de Febrero, Tabasco 2000, Villahermosa 86035 México",
+        "imag":"https://media-cdn.tripadvisor.com/media/photo-m/1280/19/f0/56/cd/i-lo-bueno-no-cambia.jpg"
     },
     {
         "id":"02",
-        "nombre":"Tamales",
-        "tel":"Masa colada, etc.",
-        "direccion":"Balancan",
-        "imag":"https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/B7C49F33-903A-4C85-9421-D0601DE0E606/Derivates/21747dd6-2941-43b9-b20b-227aa7cf7210.jpg"
+        "nombre":"MERO",
+        "tel":"Mariscos, Mexicana",
+        "direccion":"Avenue Prol. Paseo Usumacinta, Villahermosa 86280 México",
+        "imag":"https://media-cdn.tripadvisor.com/media/photo-w/12/36/b1/83/mero.jpg"
     }
 ]

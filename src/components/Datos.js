@@ -21,7 +21,7 @@ function Datos(props) {
             height={200}
             />
             <p class="card-text">
-               <strong>De:</strong> {telefono}
+               <strong>Tipos de comidas:</strong> {telefono}
               </p>
               <p class="card-text">
               <strong>Direccion:</strong>{direccion}
