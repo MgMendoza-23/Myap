@@ -24,7 +24,7 @@ export default function BarraMenu() {
                     <li><Link class="dropdown-item" to="/Notificacion">Notificaciones</Link></li>
                     <li><a class="dropdown-item" href="#">Soporte</a></li>
                     <li><hr class="dropdown-divider"/></li>
-                    <li><Link class="dropdown-item" to="/Defaul">Perfil</Link></li>
+                    <li><Link class="dropdown-item" to="/Perfil">Perfil</Link></li>
                   </ul>
                 </li>
                 <li class="nav-item">

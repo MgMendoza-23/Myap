@@ -7,7 +7,7 @@ import Home from '../pages/Home';
 import Lista from '../components/Lista';
 import DatosPersonales from '../components/DatosPersonales';
 import Notificacion from '../components/Notificacion';
-
+import Perfil from "../perfil/Perfil";
 
 export default function Rutas() {
   return (
@@ -17,6 +17,7 @@ export default function Rutas() {
         <Route path='/lista' exact element={<Lista/>}/>
         <Route path='/datos' exact element={<DatosPersonales/>}/>
         <Route path='/Notificacion' exact element={<Notificacion/>}/>
+        <Route path='/Perfil' exact element={<Perfil/>}/>
     </Routes>
     </Layout>
   )
