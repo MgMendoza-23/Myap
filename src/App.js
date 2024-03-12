@@ -18,9 +18,9 @@ const App = () => {
           <Rutas/>
           <Defaul/>
         </BrowserRouter>
-      ) : (
-        <Login onLogin={handleLogin} />
-      )}
+      ):(
+        <Login onLogin={handleLogin}/>
+        )}
     </div>
   )
 }

@@ -45,13 +45,32 @@ export default function BarraMenu() {
                     </path></svg>
                     </button></Link>
                 </li>
-          <form className="d-flex" role="search">
-          
-            <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
-            <button className="btn btn-outline-success" type="submit">Buscar</button>
-          </form>
-        </div>
+                <li class="nav-item">
+                  <Link class="nav-link" to="/lista">Menú</Link>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Mas
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><Link class="dropdown-item" to="/Notificacion">Notificaciones</Link></li>
+                    <li><a class="dropdown-item" href="#">Soporte</a></li>
+                    <li><hr class="dropdown-divider"/></li>
+                    <li><Link class="dropdown-item" to="/Perfil">Perfil</Link></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+              </div>
       </div>
     </nav>
+             
+        
+
   )
 }
