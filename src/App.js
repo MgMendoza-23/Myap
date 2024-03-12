@@ -3,8 +3,6 @@ import { BrowserRouter, Redirect } from 'react-router-dom';
 import Login from "./Login/Login"
 import Rutas from "./routes/Rutas";
 import Defaul from './components/Defaul';
-import Notificacion from "./components/Notificacion"
-
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);

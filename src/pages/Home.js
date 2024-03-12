@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.css';
-
+import { Link } from 'react-router-dom';
 export default function Home() {
   const handleReservationClick = (e) => {
     e.stopPropagation(); // Detener la propagación del evento de clic
@@ -24,22 +24,22 @@ export default function Home() {
           <div class="carousel-item active">
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjS3uHBwJpdFjA5gBHbPUP8l7944OY9QuKP7lhb_7HFoXNAukjwFSFcEU2344UvrKDeU_Yw0Z2pMcz4FVewqfM57vGWiFKnEqwJ54cIpQs2mYie0fErXZepGkJds0toRkcKkMZQKcd5fDMbfTtEu9PtJDiu9Q9Ceg1IKLo8VUljGaYYyqoa6qeX7XBxMA/s736/garrobo.jpg" class="d-block w-100" alt="..."/>
             <div class="carousel-caption d-none d-md-block">
-              <h3>Pollos Asados</h3>
-              <p>Encuatra la variedad de pollos Asados al carbon</p>
+              <h3></h3>
+              <p></p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="https://cache.marriott.com/marriottassets/marriott/VSACY/vsacy-restaurant-0015-hor-feat.jpg" class="d-block w-100" alt="..."/>
             <div class="carousel-caption d-none d-md-block">
-              <h3>Variedad de Tacos</h3>
-              <p>Encuatremtra el mejor guizo para tus tacos</p>
+              <h3></h3>
+              <p></p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/b5/28/f6/salon-principal.jpg" class="d-block w-100" alt="..."/>
             <div class="carousel-caption d-none d-md-block">
-              <h3>Variedad de Pizas</h3>
-              <p>Encuentra la variedad de pizzas a tu gusto</p>
+              <h3></h3>
+              <p></p>
             </div>
           </div>
         </div>
@@ -89,7 +89,9 @@ export default function Home() {
             <p>“Excelente atención”</p>
           </div>
           <div className="restaurant-actions">
-            <button onClick={handleReservationClick}>Reservar</button>
+            <button onClick={handleReservationClick}>
+            <Link to='/datos'>Reservar</Link>
+            </button>
             <button onClick={handleOrderOnlineClick}>Pedir en línea</button>
           </div>
         </div>
