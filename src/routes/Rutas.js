@@ -17,7 +17,6 @@ export default function Rutas() {
         <Route path='/lista' exact element={<Lista/>}/>
         <Route path='/datos' exact element={<DatosPersonales/>}/>
         <Route path='/Notificacion' exact element={<Notificacion/>}/>
-        <Route path='/Perfil' exact element={<Perfil/>}/>
     </Routes>
     </Layout>
   )
