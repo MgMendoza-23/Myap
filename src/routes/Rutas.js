@@ -9,7 +9,7 @@ import Perfil from '../perfil/Perfil';
 import Notificacion from '../notificacion/Notificacion';
 import DatosPersonales from '../components/DatosPersonales';
 import Tabla from '../components/Tabla';
-
+import Coloso from '../reservas/Coloso';
 
 export default function Rutas() {
   return (
@@ -22,6 +22,8 @@ export default function Rutas() {
         <Route path='/datos' exact element={<DatosPersonales/>}/>
         <Route path='/datos/:id' exact element={<DatosPersonales/>}/>
         <Route path='/tabla' exact element={<Tabla/>}/>
+        <Route path='/Coloso' exact element={<Coloso/>}/>
+
     </Routes>
     </Layout>
   )

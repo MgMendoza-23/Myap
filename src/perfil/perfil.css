@@ -6,9 +6,11 @@
     color: white; /* Cambiamos el color del texto a blanco */
     padding: 20px;
     border-radius: 10px;
+    width: 50%;
 }
 
 .profile img {
+    align: center;
     width: 100px;
     height: 110px;
     border-radius: 30%;
@@ -21,7 +23,7 @@
 }
 
 .profile-details button {
-    background-color: white;
+    background-color: rgb(230, 24, 24);
     color: black;
     border: none;
     padding: 8px 16px;

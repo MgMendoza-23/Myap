@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./perfil.css";
 function Perfil(){
     const variables={
@@ -9,14 +9,33 @@ function Perfil(){
     }
 
     const [valores, setValores]=useState(variables);
+    const [dePerfil, setDePerfil]=useState([]);
+
+    const datosPerfil=async()=>{
+      //const buscar=await Axios.get("/perfil");
+      //setDePerfil(buscar.data);
+    }
+
+    useEffect(()=>{
+datosPerfil();
+    },[])
 
     return(
         <div className="profile">
-        <img src={valores.imageUrl} alt="Profile" />
         <div className="profile-details">
-          <h2>{valores.name}</h2>
-          <p>Age: {valores.age}</p>
-          <p>Bio: {valores.bio}</p>
+          {
+            dePerfil.map((datos)=>{
+              return(
+                <>
+                <img src={valores.imageUrl} alt="Profile" />
+                        <h2>{datos.name}</h2>
+                        <p>Edad: {valores.age}</p>
+                        <p>Descripcion: {valores.bio}</p>
+                        </>
+              )
+            })
+          }
+        
         </div>
       </div>
     )

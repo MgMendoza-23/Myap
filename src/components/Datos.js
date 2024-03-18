@@ -1,5 +1,6 @@
 import React from "react";
 import './lista.css';
+import { Link } from 'react-router-dom';
 function Datos(props) {
   //console.log(props);
   const { nombre, telefono, direccion, imagenes } = props;
@@ -28,12 +29,12 @@ function Datos(props) {
               </p>
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary"><button type="button"
+              <small class="text-body-secondary"><Link type="button"
                class="btn btn-info"
-               onClick={Mensaje}
+               to="/Coloso"
                >
                 
-                Leer más..</button></small>
+                Leer más..</Link></small>
             </div>
           </div>
         </div>

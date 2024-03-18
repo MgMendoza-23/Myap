@@ -14,11 +14,12 @@ const Login = ({ onLogin }) => {
   };
 
   const handleRegister = () => {
-    window.location.href = '/registro'; // Redirige a la página de registro
+    window.location.href = '/'; 
   };
 
   return (
     <div className="login-container">
+    <div className='form-container p-5 rounded '>
       <h2 className="login-header">Iniciar sesión</h2>
       <label className="login-label">
         Usuario:
@@ -44,6 +45,7 @@ const Login = ({ onLogin }) => {
       <button onClick={handleRegister} className="registro-button"> {/* Cambiado el className a registro-button */}
         Registrarse
       </button>
+    </div>
     </div>
   );
 };

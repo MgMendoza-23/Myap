@@ -1,3 +1,39 @@
-body{
-    background-color: black;
+.restaurant-review {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(249, 249, 249, 0.2);
+}
+
+.restaurant-review .ant-card {
+  margin-bottom: 20px;
+}
+
+.restaurant-images {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.main-image {
+  width: 65%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.side-images img {
+  width: 30%;
+  height: auto;
+  margin-left: 5px;
+  border-radius: 4px;
+}
+
+.restaurant-details p,
+.restaurant-location p {
+  margin: 0;
+  color: #555;
+}
+
+.rate {
+  margin-bottom: 20px;
 }

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default function BarraMenu() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
+      <div className="container-fluid ">
         <h1 className="navbar-brand" href="#">Explora los Restaurantes</h1>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -29,7 +29,6 @@ export default function BarraMenu() {
                   <li><Link className="dropdown-item" to="/Perfil">Perfil</Link></li>
                 </ul>
               </li>
-              
             </div> 
           </ul><li className="nav-item">
                 <Link className="nav-link" to="/Notificacion"><button class="button">
@@ -44,23 +43,6 @@ export default function BarraMenu() {
                     17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z">
                     </path></svg>
                     </button></Link>
-                </li>
-                <li class="nav-item">
-                  <Link class="nav-link" to="/lista">Menú</Link>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Mas
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><Link class="dropdown-item" to="/Notificacion">Notificaciones</Link></li>
-                    <li><a class="dropdown-item" href="#">Soporte</a></li>
-                    <li><hr class="dropdown-divider"/></li>
-                    <li><Link class="dropdown-item" to="/Perfil">Perfil</Link></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                 </li>
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
