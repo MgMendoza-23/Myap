@@ -1,64 +1,6 @@
-/* Login.css */
-
-
-.Login{
-  background-color: #800080;
-}
-.login-container {
-  max-width: 600px; /* Duplicar el ancho del contenedor */
-  margin: 0 auto;
-  padding: 40px; /* Duplicar el espacio interno */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Centrar elementos dentro del contenedor */
-  background-image: url('https://static.vecteezy.com/system/resources/previews/001/900/914/non_2x/blurred-restaurant-scene-with-empty-tabletop-free-photo.jpg'); /* Agregar la imagen de fondo */
-  background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
-}
-
-.login-header {
-  margin-bottom: 20px;
-  color: white;
-  font-weight: bold;
-}
-
-.login-label {
-  display: block;
-  margin-bottom: 8px;
-  color: white;
-  font-weight: bold;
-}
-
-.login-input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  border: 1px solid skyblue; /* Cambiar el color del borde */
-  border-radius: 3px;
-  background-color: lightblue; /* Cambiar el color de fondo */
-  color: black;
-}
-
-.login-button, .registro-button { /* Estilos para ambos botones */
-  width: 100%;
+.form-outline {
+  background-color: rgba(216, 214, 214, 0.751);
+  border-radius: 8px;
   padding: 10px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: all 0.3s; /* Transición suave para los cambios de tamaño */
-}
-
-.login-button {
-  background-color: #007bff;
-  color: #fff;
-  margin-bottom: 10px; /* Espacio entre los botones */
-}
-
-.registro-button {
-  background-color: #800080; /* Color morado */
-  color: #fff;
-}
-
-.login-button:hover, .registro-button:hover {
-  transform: scale(1.1); /* Aumentar el tamaño al 110% en el hover */
+  margin-bottom: 16px;
 }

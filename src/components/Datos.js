@@ -1,14 +1,17 @@
 import React from "react";
 import './lista.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { dato } from "../descripcion/RestDatos";
 function Datos(props) {
   //console.log(props);
   const { nombre, telefono, direccion, imagenes } = props;
 
   const Mensaje=()=>{
+    const navigate=useNavigate(dato);
     alert('Hola a todos')
   }
   return (
+    
     <>
       
         <div class="col">
@@ -31,7 +34,7 @@ function Datos(props) {
             <div class="card-footer">
               <small class="text-body-secondary"><Link type="button"
                class="btn btn-info"
-               to="/Coloso"
+               to={(`/descripcion/${dato.id}`)}
                >
                 
                 Leer más..</Link></small>

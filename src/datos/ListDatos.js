@@ -14,7 +14,7 @@ export const lista=[
         "imag":"https://media-cdn.tripadvisor.com/media/photo-o/12/2b/e3/5d/comodas-instalaciones.jpg"
     },
     {
-        "id":"02",
+        "id":"03",
         "nombre":"Taquerias",
         "tel":"Al pastor, de asada, empanizado, etc.",
         "direccion":"Balancan",
@@ -22,7 +22,7 @@ export const lista=[
 
     },
     {
-        "id":"01",
+        "id":"04",
         "nombre":"Vuelve Carmela ",
         "tel":"Mexicana, Contemporánea",
         "direccion":"Prolongación 27 de Febrero 3303 Local PA01, Villahermosa 86037 México",

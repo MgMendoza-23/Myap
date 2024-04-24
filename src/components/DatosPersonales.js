@@ -1,115 +1,140 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Axios from "../services/Axios";
 
-export default function DatosPersonales() {
-  const valores = {
+export default function DatosPersonales({ datos, buscarDatos }) {
+  const [datosForm, setDatosForm] = useState({
     nombre: "",
     direccion: "",
     correo: "",
     estado: "",
     telefono: "",
-  };
+  });
 
-  const [datos, setDatos] = useState(valores);
+  useEffect(() => {
+    if (datos) {
+      setDatosForm({
+        nombre: datos.nombre,
+        direccion: datos.direccion,
+        correo: datos.correo,
+        estado: datos.estado,
+        telefono: datos.telefono,
+      });
+    }
+  }, [datos]);
 
-  //Funcion para obtener los inputs
   const onChange = (e) => {
     const { name, value } = e.target;
-    setDatos({ ...datos, [name]: value });
+    setDatosForm({ ...datosForm, [name]: value });
   };
 
-  const GuardarDatos = () => {
-    Axios.post("/datos/saveData", datos).then(() => {
-      console.log("Datos enviados correctamente");
-    });
+  const guardarDatos = () => {
+    if (datos) {
+      actualizarDatos(datos._id, datosForm);
+      buscarDatos();
+
+    } else {
+      crearDatos(datosForm);
+    }
   };
 
-  //Funcion para el onsubmit
+  const crearDatos = (newData) => {
+    Axios.post("/datos/saveData", newData)
+      .then(() => {
+        console.log("Datos creados correctamente");
+
+      })
+      .catch((error) => {
+        console.error("Error al crear datos:", error);
+      });
+  };
+
+  const actualizarDatos = (id, newData) => {
+    Axios.patch(`/datos/actualizar/${id}`, newData)
+      .then(() => {
+        console.log("Datos actualizados correctamente");
+      })
+      .catch((error) => {
+        console.error("Error al actualizar datos:", error);
+      });
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // console.log(datos);
-    GuardarDatos();
+    guardarDatos();
   };
 
   return (
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Datos Personales</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-
-        <form class="row g-3 needs-validation" onSubmit={onSubmit} novalidate>
-          <div class="col-md-12">
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title">Datos Personales</h5>
+        <form
+          className="row g-3 needs-validation"
+          onSubmit={onSubmit}
+          noValidate
+        >
+          <div className="col-md-12">
             <input
               name="nombre"
               type="text"
-              class="form-control"
-              id="validationCustom01"
-              value={datos.nombre}
+              className="form-control"
+              value={datosForm.nombre}
               onChange={onChange}
               placeholder="Nombre completo"
               required
             />
-            <div class="valid-feedback">Looks good!</div>
+            <div className="valid-feedback">Looks good!</div>
           </div>
-          <div class="col-md-12">
+          <div className="col-md-12">
             <input
               name="direccion"
               type="text"
-              class="form-control"
-              id="validationCustom02"
-              value={datos.direccion}
+              className="form-control"
+              value={datosForm.direccion}
               onChange={onChange}
               placeholder="Dirección"
               required
             />
-            <div class="valid-feedback">Looks good!</div>
+            <div className="valid-feedback">Looks good!</div>
           </div>
-          <div class="col-md-12">
-            <div class="input-group has-validation">
-              <span class="input-group-text" id="inputGroupPrepend">
-                @
-              </span>
+          <div className="col-md-12">
+            <div className="input-group has-validation">
+              <span className="input-group-text">@</span>
               <input
-                type="text"
                 name="correo"
-                class="form-control"
-                id="validationCustomUsername"
-                placeholder="Correo"
-                value={datos.correo}
+                type="text"
+                className="form-control"
+                value={datosForm.correo}
                 onChange={onChange}
-                aria-describedby="inputGroupPrepend"
+                placeholder="Dirección de correo"
                 required
               />
-              <div class="invalid-feedback">Please choose a username.</div>
+              <div className="invalid-feedback">Por favor, ingresa un correo válido.</div>
             </div>
           </div>
-          <div class="col-md-12">
+          <div className="col-md-12">
             <input
-              type="text"
               name="estado"
-              class="form-control"
-              id="validationCustom03"
-              placeholder="Estado"
-              value={datos.estado}
-              onChange={onChange}
-              required
-            />
-          </div>
-          <div class="col-md-12">
-            <input
               type="text"
-              name="telefono"
-              class="form-control"
-              id="validationCustom03"
-              placeholder="Telefono"
-              value={datos.telefono}
+              className="form-control"
+              value={datosForm.estado}
               onChange={onChange}
+              placeholder="Estado"
               required
             />
           </div>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-primary" type="submit">
+          <div className="col-md-12">
+            <input
+              name="telefono"
+              type="text"
+              className="form-control"
+              value={datosForm.telefono}
+              onChange={onChange}
+              placeholder="Teléfono"
+              required
+            />
+          </div>
+          <div className="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button className="btn btn-primary" type="submit">
               Enviar
             </button>
           </div>
